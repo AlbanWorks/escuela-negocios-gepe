@@ -4,7 +4,7 @@ import React from 'react'
 export const HeadConfig = () => {
 	return (
 		<Head>
-			<title>Consultoría Empresarial para Pymes</title>
+			<title>Escuela de Negocios GEPE</title>
 			<meta
 				name="description"
 				content="Ayudamos a emprendedores y pymes a profesionalizar su negocio con nuestro método de gerenciamiento empresarial. Diagnóstico y acompañamiento personalizado."
