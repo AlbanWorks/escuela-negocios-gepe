@@ -1,0 +1,40 @@
+.container{
+	width: 100%;
+	padding-top: 32px;
+}
+.title{
+	margin: 0;
+	margin-bottom: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+.description {
+	margin: 0;
+	margin-bottom: 16px;
+	max-width: 80ch;
+	color: #3a3a3a;
+	line-height: 1.6;
+	font-size: 1.1rem;
+	letter-spacing: 0.01em;
+}
+.list{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 16px;
+}
+.list li{
+	margin-bottom: 8px;
+	font-size: 1.1rem;
+}
+.bullet{
+	display: block;
+	margin-bottom: 8px;
+	font-size: 1.1rem;
+}
+@media (min-width: 800px) {
+	.container{
+		width: 50%;
+		padding-top: 0;
+	}
+}

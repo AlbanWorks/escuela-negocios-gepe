@@ -31,7 +31,7 @@ export const Hero = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa aspernatur eius sed
           </p>
           <div className={styles.buttonContainer}>
-            <Link href={"#" + SECTION_IDS.servicios} className={styles.button}>
+            <Link href={"/#" + SECTION_IDS.cursos} className={styles.button}>
               Ver Cursos
             </Link>
           </div>

@@ -1,19 +1,22 @@
 import { useState, useEffect } from 'react';
 import NavOption from './components/NavOption/NavOption';
-import { useActiveSection } from './hooks/useActiveSection';
 import styles from './Navbar.module.css';
 import { SECTION_IDS } from '@/utils/navLinks';
+import { useRouter } from 'next/router';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER
   const navLinks = [
-    { label: 'Cursos', href: `#sdasdasd`},
-	  { label: 'Aula Virtual', href: `#${SECTION_IDS.escuela_negocios}`},
-	  { label: 'Contacto', href: `https://wa.me/${phoneNumber}?text=${'Hola, vengo de la web de GEPE'}`},
+    { label: 'Programas', href: `/#${SECTION_IDS.cursos}`},
+	{ label: 'Aula Virtual', href: `/#aula-virtual`},
+	{ label: 'Alumnos', href: `/#${SECTION_IDS.testimonios}`},
+	{ label: 'Sedes', href: `/#${SECTION_IDS.sedes}`},
+	{ label: 'Contacto', href: `https://wa.me/${phoneNumber}?text=${'Hola, vengo de la web de GEPE'}`},
   ];
-
-  const closeMenu = () => setIsOpen(false);
+	const router = useRouter()
+  	const closeMenu = () => setIsOpen(false);
 
   // Bloquear scroll al abrir menú
   useEffect(() => {
@@ -28,7 +31,7 @@ const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER
       />
 
       <div className={styles.container}>
-        <div className={styles.logoWrapper}>
+        <div className={styles.logoWrapper} onClick={()=>router.push('/')}>
           <img src="/images/navbar_logo.webp" alt="Logo" className={styles.logo} />
         </div>
 

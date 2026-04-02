@@ -18,10 +18,11 @@ const Footer = () => {
         <div className={styles.column}>
           <h4 className={styles.title}>Navegación</h4>
           <ul className={styles.list}>
-            <li><Link href={`#${SECTION_IDS.inicio}`} className={styles.link}>Inicio</Link></li>
-            <li><Link href={`#${SECTION_IDS.servicios}`}  className={styles.link}>Servicios</Link></li>
-            <li><Link href={`#${SECTION_IDS.testimonios}`} className={styles.link}>Testimonios</Link></li>
-            <li><Link href="#" className={styles.link}>Contacto</Link></li>
+            <li><Link href={`/#${SECTION_IDS.cursos}`} className={styles.link}>Programas</Link></li>
+            <li><Link href={`/#`}  className={styles.link}>Aula virtual</Link></li>
+            <li><Link href={`/#${SECTION_IDS.testimonios}`} className={styles.link}>Alumnos</Link></li>
+			<li><Link href={`/#${SECTION_IDS.sedes}`} className={styles.link}>Sedes</Link></li>
+            <li><Link href="" className={styles.link}>Contacto</Link></li>
           </ul>
         </div>
         <div className={styles.column}>

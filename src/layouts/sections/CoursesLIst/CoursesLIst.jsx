@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './CoursesLIst.module.css';
+import Link from 'next/link';
+import { SECTION_IDS } from '@/utils/navLinks';
 
 const COURSES_MOCK = [
   {
@@ -8,7 +10,7 @@ const COURSES_MOCK = [
     category: "Formación para Empresas",
     modality: "Presencial (Barcelona)",
     date: "12 Mayo",
-    duration: "Cursos largos",
+    duration: "course",
     status: "Inscríbete"
   },
   {
@@ -17,7 +19,7 @@ const COURSES_MOCK = [
     category: "Contabilidad para Empresas",
     modality: "Presencial (Valencia)",
     date: "18 Mayo",
-    duration: "Módulos cortos",
+    duration: "course",
     status: "Inscríbete"
   },
   {
@@ -26,7 +28,7 @@ const COURSES_MOCK = [
     category: "Consultoría",
     modality: "Presencial (Buenos Aires)",
     date: "22 Mayo",
-    duration: "Charlas individuales",
+    duration: "talk",
     status: "Inscríbete"
   },
   {
@@ -35,7 +37,7 @@ const COURSES_MOCK = [
     category: "Contabilidad para Empresas",
     modality: "Presencial Tucumán",
     date: "05 Junio",
-    duration: "Módulos cortos",
+    duration: "course",
     status: "Inscríbete"
   },
   {
@@ -44,7 +46,7 @@ const COURSES_MOCK = [
     category: "Formación para Empresas",
     modality: "Presencial (Córdoba, AR)",
     date: "10 Junio",
-    duration: "Charlas individuales",
+    duration: "talk",
     status: "Inscríbete"
   },
   {
@@ -53,7 +55,7 @@ const COURSES_MOCK = [
     category: "Formación para Empresas",
     modality: "Presencial (Mar del Plata)",
     date: "15 Junio",
-    duration: "Cursos largos",
+    duration: "course",
     status: "Inscríbete"
   }
 ];
@@ -67,7 +69,7 @@ export default function CoursesList() {
   }, []);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={SECTION_IDS.cursos}>
       <div className={styles.header}>
         <h2 className={styles.title}>
           ¿Quieres ser parte de nuestros programas y profesionalizar tu empresa?
@@ -81,9 +83,17 @@ export default function CoursesList() {
           <div key={course.id} className={styles.courseItem}>
             <div className={styles.courseName}>{course.title}</div>
             <div className={styles.date}>{course.date} - {course.modality}</div>
-            <a href="#" className={styles.button}>
-              <span>Inscribirse</span>
-            </a>
+			<Link 
+				href={
+					course.duration === 'course' ?
+						`/courses/${course.id}`
+					:
+						`/talks/${course.id}`
+				} 
+				className={styles.button}
+			>
+				Inscribirse
+			</Link>
           </div>
         ))}
       </div>

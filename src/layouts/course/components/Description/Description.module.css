@@ -1,0 +1,103 @@
+.container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	padding-top: 80px;
+	background: linear-gradient(-45deg, rgb(243, 243, 243), #fff);
+}
+.title{
+	font-size: 2rem;
+	font-weight: 200;
+	margin: 0;
+	margin-bottom: 32px;
+	text-align: center;
+}
+.description {
+	margin:0;
+	margin-bottom: 32px;
+	max-width: 80ch;
+	color: #3a3a3a;
+	line-height: 1.6;
+	font-size: 1.1rem;
+	letter-spacing: 0.01em;
+	text-align: center;
+}
+.listsContainer{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.list{
+	width: 100%;
+	border: 1px solid rgb(230, 230, 230);
+	border-radius: 20px;
+	padding: 20px;
+	gap: 12px;
+	background-color: #fff;
+	max-width: 400px;
+	box-shadow: 0 0 60px rgb(219, 236, 240);
+}
+.listTitleContainer{
+	margin-bottom: 32px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.listTitle{
+	font-weight: 600;
+	font-size: 1.3rem;
+	color: #3a3a3a;
+}
+.list ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 32px;
+}
+.list ul li{
+	margin-bottom: 20px;
+	position: relative;
+	padding-left: 20px;
+	display: flex;
+	color: #5c5c5c;
+	font-size: 1.1rem;
+}
+.list ul li::after{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	left: 0;
+	top: 6px;
+	padding: 0;
+}
+.problems ul li::after{
+	background-color: rgb(214, 40, 40);
+}
+.solutions ul li::after{
+	background-color: rgb(70, 182, 79);
+}
+.problems{
+	border-color: rgba(214, 40, 40, 0.466);
+}
+.solutions{
+	border-color: rgba(70, 182, 79, 0.459);
+}
+
+@media (min-width: 900px) {
+	.listsContainer{
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+	.list{
+		height: 340px;
+	}
+}

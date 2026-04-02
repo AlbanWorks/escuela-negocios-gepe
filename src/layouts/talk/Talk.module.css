@@ -1,0 +1,29 @@
+.container{
+	padding: 20px;
+	padding-top: 110px;
+}
+.formContainer{
+	max-width: 400px;
+}
+.title{
+	margin: 0;
+	font-weight: 400;
+	font-size: 2.5rem;
+	margin-bottom: 32px;
+}
+@media (min-width: 900px) {
+	.container{
+		padding: 32px;
+		padding-top: 110px;
+	}
+	.title{
+		width: 50%;
+	}
+	.formContainer{
+		width: 400px;
+		position: absolute;
+		top: 45%;
+  		left: 80%;
+ 		transform: translate(-50%, -50%);
+	}
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './InternationalPresence.module.css';
-import LocationPin from '@/components/svgIcons/location/LocationPin';
+import LocationPin from '@/components/svgIcons/LocationPin';
+import { SECTION_IDS } from '@/utils/navLinks';
 
 const DATA_SEDES = {
   argentina: {
@@ -27,7 +28,7 @@ const InternationalPresence = () => {
   const [activeCountry, setActiveCountry] = useState('argentina');
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id={SECTION_IDS.sedes}>
       <div className={styles.container}>
         <div className={styles.mapWrapper}>
 			<div className={styles.header}>
