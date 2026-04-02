@@ -1,0 +1,97 @@
+/* CoursesList.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.courseItem {
+  display: grid;
+  grid-template-columns: 2fr 1fr 150px;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  gap: 20px;
+}
+
+.list .courseItem:last-child {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.courseName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  text-align: start;
+}
+
+.date, .modality {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--gepe_blue1, #0056b3); /* Fallback azul si la var no existe */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .courseItem {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 25px 0;
+    text-align: center;
+    justify-items: flex-start;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 200px;
+  }
+}

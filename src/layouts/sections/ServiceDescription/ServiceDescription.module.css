@@ -1,0 +1,136 @@
+.container{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 60px 16px;
+}
+.containerLeft{
+	background-color: var(--grey_bg);
+	background-image: linear-gradient(to bottom, rgb(243, 243, 243), rgba(0, 0, 0, 0),  rgba(0, 0, 0, 0));
+}
+.img{
+	width: 100%;
+	max-width: 480px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.contentContainer{
+	width: 100%;
+	max-width: 700px;
+	margin-top: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.title{
+	font-size: 1.8rem;
+	font-weight: 200;
+	margin: 0;
+	margin-bottom: 32px;
+}
+.description {
+	margin: 0 0 1rem 0;
+	max-width: 80ch;
+	color: #3a3a3a;
+	line-height: 1.6;
+	font-size: 1rem;
+	letter-spacing: 0.01em;
+}
+.description b{
+	color: var(--gepe_blue1);
+}
+.buttonContainer{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.button{
+	margin-top: 16px;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	color: #fff;
+	background-color: var(--gepe_blue1);
+	width: 100%;
+	height: 48px;
+	max-width: 350px;
+	border-radius: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background 0.3s ease;
+}
+.button:hover{
+	background-color: var(--gepe_blue0);
+}
+.formOverlay{
+	width: 100%;
+	padding: 20px;
+	height: 100dvh;
+	padding: 20vh 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+.formOverlayButton{
+	margin: 0;
+	border: none;
+	outline: none;
+	background: none;
+	color: #fff;
+	font-size: 1.2rem;
+	width: 32px;
+	height: 32px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	transition: background 0.3s ease;
+	transition: color 0.3s ease;
+	background-color: #fff;
+	color: #000;
+}
+.formOverlayButton:hover{
+	background-color: #fff;
+	color: #000;
+}
+@media (min-width: 800px) {
+	.container{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 64px 32px;
+		gap: 20px;
+	}
+	.containerRight{
+		flex-direction: row-reverse;
+	}
+	.contentContainer{	
+		margin-top: 0;
+		align-items: start;
+	}
+	.title{
+		font-size: 2.4rem;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 48px;
+	}
+	.description {
+		margin: 0 0 1rem 0;
+		max-width: 80ch;
+		color: #3a3a3a;
+		line-height: 1.6;
+		font-size: 1.1rem;
+		letter-spacing: 0.01em;
+	}	
+}

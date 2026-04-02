@@ -1,0 +1,25 @@
+:root {
+	--gepe_blue0: rgb(45,78,112);
+  	--gepe_blue1: rgb(51,102,153);
+	--gepe_blue2: rgb(17,151,212);
+  	--gepe_blue3: rgb(38,184,235);
+	--gepe_black: #000;
+	--grey_bg: #F8F8F8;
+	--white_bg: #fff;
+	--dark_bg: #181b1d;
+	font-family: Outfit, sans-serif;
+	scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

@@ -1,0 +1,138 @@
+/* --- BASE: MÓVILES PEQUEÑOS --- */
+.formCard {
+  background-color: #1a1a1a;
+  border-radius: 16px; /* Un poco menos agresivo que 20px en pantallas mini */
+  max-width: 95%; /* Para que no toque los bordes del cel */
+  margin: 1rem auto;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem; /* Padding reducido */
+  text-align: center;
+  font-size: 1rem; /* Fuente más pequeña para que no rompa en 2 líneas */
+  margin: 0;
+  font-weight: 700;
+}
+
+.form {
+  padding: 1rem; /* Espacio interno más ajustado */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; /* Menos espacio entre elementos */
+}
+
+/* En mobile, las filas son columnas por defecto */
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.group label {
+  color: #ccc;
+  font-size: 0.8rem; 
+  font-weight: 600;
+}
+
+.group input, 
+.group select {
+  background-color: #bcbcbc;
+  border: 1px solid #444;
+  border-radius: 8px; 
+  padding: 0.6rem;
+  color: #333;
+  font-size: 0.9rem; 
+  outline: none;
+}
+
+.group input::placeholder {
+  color: #666;
+}
+
+.checkboxGroup {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+  font-size: 0.7rem; /* Texto legal más compacto */
+  color: #bbb;
+  line-height: 1.2;
+}
+
+.checkboxGroup input {
+  margin-top: 2px;
+  transform: scale(0.9); /* Checkbox un pelín más pequeño */
+}
+
+.submitBtn {
+  background-color: #48bb78;
+  color: #fff;
+  border: none;
+  padding: 0.8rem; /* Botón menos alto */
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 0.3rem;
+}
+
+/* --- DESKTOP / MÓVILES GRANDES (Min-width: 600px) --- */
+@media (min-width: 600px) {
+  .formCard {
+    max-width: 500px;
+    border-radius: 20px;
+    margin: 2rem auto;
+  }
+
+  .header {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .form {
+    padding: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .row {
+    flex-direction: row; /* Aquí volvemos al diseño original de lado a lado */
+	justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .group label {
+    font-size: 0.9rem;
+  }
+.group{
+	flex-grow: 1;
+}
+
+  .group input, 
+  .group select {
+    font-size: 1rem;
+    border-radius: 12px;
+	height: 42px;
+  }
+  .checkboxGroup {
+    font-size: 0.75rem;
+    gap: 0.8rem;
+  }
+
+  .submitBtn {
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+	border-radius: 16px;
+  }
+}
