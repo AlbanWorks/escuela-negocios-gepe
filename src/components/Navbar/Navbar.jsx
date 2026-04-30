@@ -10,8 +10,8 @@ const Navbar = () => {
 const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER
   const navLinks = [
     { label: 'Programas', href: `/#${SECTION_IDS.cursos}`},
-	{ label: 'Aula Virtual', href: `/#aula-virtual`},
-	{ label: 'Alumnos', href: `/#${SECTION_IDS.testimonios}`},
+	//{ label: 'Aula Virtual', href: `/#aula-virtual`},
+	//{ label: 'Alumnos', href: `/#${SECTION_IDS.testimonios}`},
 	{ label: 'Sedes', href: `/#${SECTION_IDS.sedes}`},
 	{ label: 'Contacto', href: `https://wa.me/${phoneNumber}?text=${'Hola, vengo de la web de GEPE'}`},
   ];

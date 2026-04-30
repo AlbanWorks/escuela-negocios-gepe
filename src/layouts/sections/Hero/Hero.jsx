@@ -25,14 +25,11 @@ export const Hero = () => {
     <section id="inicio" className={styles.hero}>
         <div className={styles.content}>
           <h1 className={styles.title}>
-            Escuela de negocios de GEPE
+            Escuela de Negocios
           </h1>
-          <p className={styles.subtitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa aspernatur eius sed
-          </p>
           <div className={styles.buttonContainer}>
             <Link href={"/#" + SECTION_IDS.cursos} className={styles.button}>
-              Ver Cursos
+              Ver Programas
             </Link>
           </div>
         </div>
