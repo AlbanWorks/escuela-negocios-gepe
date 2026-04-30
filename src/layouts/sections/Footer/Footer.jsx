@@ -10,7 +10,13 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.column}>
-          <img src="/images/footer_logo.png" alt="Logo Empresa" className={styles.logo} />
+        <div className={styles.logoContainer}>
+				<img 
+					src="/images/navbar_logo.webp" 
+					alt="Logo de GEPE" 
+					className={styles.logo} 
+				/>
+			</div>
           <p className={styles.mission}>
             Impulsamos la profesionalización de pequeñas y medianas empresas con soluciones reales y visión estratégica.
           </p>

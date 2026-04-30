@@ -5,7 +5,10 @@
 	align-items: center;
 	padding: 20px;
 	padding-top: 80px;
-	background: linear-gradient(-45deg, rgb(243, 243, 243), #fff);
+	
+}
+.infoContainer{
+	background-color: aliceblue;
 }
 .title{
 	font-size: 2rem;
@@ -99,5 +102,9 @@
 	}
 	.list{
 		height: 340px;
+	}
+	.infoContainer{
+		display: flex;
+		background-color: #5c5c5c;
 	}
 }

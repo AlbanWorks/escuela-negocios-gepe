@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1a1a1a; 
+  background-color: var(--gepe_blue0); 
   color: #ffffff;
   padding: 60px 0 0 0;
 }
@@ -13,11 +13,14 @@
   gap: 3rem;
   padding-bottom: 40px;
 }
-
+.logoContainer{
+	background-color: #fff;
+	border-radius: 12px;
+	width: fit-content;
+	padding: 12px;
+}
 .logo {
   height: 56px;
-  margin-bottom: 1.5rem;
-  filter: brightness(0) invert(1); 
 }
 
 .mission {
@@ -40,7 +43,7 @@
   bottom: -5px;
   width: 30px;
   height: 2px;
-  background-color: var(--gepe_blue1);
+  background-color: var(--gepe_blue2);
 }
 
 .list {
@@ -62,9 +65,8 @@
 
 
 .bottomBar {
-  background-color: #111;
+  background-color: rgb(25, 43, 61);
   padding: 20px 0;
-  border-top: 1px solid #333;
 }
 
 .bottomContainer {

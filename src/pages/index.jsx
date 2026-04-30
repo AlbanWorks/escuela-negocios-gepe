@@ -20,7 +20,13 @@ export default function Home() {
 			 	<Hero/>
 				<ServiceDescription
 					id={SECTION_IDS.contabilidad_empresas}
-					img={{url:'/images/accounting_section.webp', alt:"contabilidad"}}
+					images={
+						[
+							{url:'/images/business_section.webp', alt:"contabilidad"},
+							{url:'/images/consulting_section.webp', alt:"contabilidad"},
+							{url:'/images/accounting_section.webp', alt:"contabilidad"},
+						]	
+					}
 					title={'Escuela de Negocios'}
 					description_parts={[
    						<>
@@ -35,7 +41,13 @@ export default function Home() {
 				/>
 				<ServiceDescription
 					id={SECTION_IDS.consultoria_empresarial}
-					img={{url:'/images/consulting_section.webp', alt:"contabilidad"}}
+					images={
+						[
+							{url:'/images/business_section.webp', alt:"contabilidad"},
+							{url:'/images/consulting_section.webp', alt:"contabilidad"},
+							{url:'/images/accounting_section.webp', alt:"contabilidad"},
+						]	
+					}
 					title={'Consultoría Empresarial'}
 					description_parts={[
 						<>
@@ -52,7 +64,10 @@ export default function Home() {
 				/>
 				<CoursesList/>
 				<Metrics/>
-				<Testimonials/>
+				{/*<Testimonials/>*/}
+				<div style={{width:'100%', height:'150px'}}>
+
+				</div>
 				<InternationalPresence/>
 				<Footer/>
 			</main>

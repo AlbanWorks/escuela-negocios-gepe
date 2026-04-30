@@ -7,12 +7,17 @@ import WPForm from '@/components/WPForm/WPForm'
 const Talk = () => {
 	return (
 		<section className={st.container}>
-			<h1 className={st.title}>Sesión Informativa - PRESENCIAL TUCUMAN</h1>
-			<QuickData/>
-			<div className={st.formContainer}>
+			<div className={st.infoContainer}>
+				<h1 className={st.title}>Sesión Informativa - PRESENCIAL TUCUMAN</h1>
+				<QuickData/>
+				<div className={st.formMobileContainer}>
+					<WPForm/>
+				</div>
+				<TalkBody/>
+			</div>
+			<div className={st.formDesktopContainer}>
 				<WPForm/>
 			</div>
-			<TalkBody/>
 		</section>
 	)
 }

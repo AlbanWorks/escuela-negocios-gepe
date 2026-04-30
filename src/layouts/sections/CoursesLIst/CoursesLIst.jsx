@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import styles from './CoursesLIst.module.css';
 import Link from 'next/link';
 import { SECTION_IDS } from '@/utils/navLinks';
-
+import styles from './CoursesLIst.module.css'
 const COURSES_MOCK = [
   {
     id: "c-001",
@@ -64,7 +63,6 @@ export default function CoursesList() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    // Simulamos llamada a API
     setCourses(COURSES_MOCK);
   }, []);
 
@@ -74,26 +72,26 @@ export default function CoursesList() {
         <h2 className={styles.title}>
           ¿Quieres ser parte de nuestros programas y profesionalizar tu empresa?
         </h2>
-        <p className={styles.subtitle}>
-         Formate con nuestros programas Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates labore quae, esse cupiditate expedita perspiciatis et eum possimus eaque.
-        </p>
       </div>
       <div className={styles.list}>
         {courses.map((course) => (
           <div key={course.id} className={styles.courseItem}>
-            <div className={styles.courseName}>{course.title}</div>
-            <div className={styles.date}>{course.date} - {course.modality}</div>
-			<Link 
-				href={
-					course.duration === 'course' ?
-						`/courses/${course.id}`
-					:
-						`/talks/${course.id}`
-				} 
-				className={styles.button}
-			>
-				Inscribirse
-			</Link>
+            <div className={styles.courseName}>
+              <span>{course.title}</span>
+              <span className={styles.categoryBadge}>{course.category}</span>
+            </div>
+            <div className={styles.details}>
+              <span className={styles.date}>{course.date}</span>
+              <span className={styles.modality}>{course.modality}</span>
+            </div>
+            <div className={styles.actions}>
+				<Link 
+					href={course.duration === 'course' ? `/courses/${course.id}` : `/talks/${course.id}`} 
+					className={styles.button}
+				>
+					Inscribirse
+				</Link>
+            </div>
           </div>
         ))}
       </div>

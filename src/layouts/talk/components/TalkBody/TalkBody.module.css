@@ -34,7 +34,6 @@
 }
 @media (min-width: 800px) {
 	.container{
-		width: 50%;
 		padding-top: 0;
 	}
 }

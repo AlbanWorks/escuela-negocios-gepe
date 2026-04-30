@@ -1,0 +1,26 @@
+
+.container {
+    position: relative;
+    width: 400px;  /* Tamaño fijo */
+    height: 400px; /* Tamaño fijo */
+    margin: 0 auto; /* Centra el carousel horizontalmente si el padre es más ancho */
+    overflow: hidden;
+    border-radius: 20px; /* Opcional: un toque estético para el cuadrado */
+}
+
+.img {
+    position: absolute;
+    top: 0;
+    left: 0; /* Ya no hace falta el 50% porque el contenedor mide lo mismo que la imagen */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que la imagen llene los 400px sin deformarse */
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    pointer-events: none;
+}
+
+.img.active {
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -14,30 +14,30 @@ export const Hero = () => {
 				<Link href={"#inscribirse"} className={st.button}>
 					Inscribirme
 				</Link>
-				<div className={st.bulletsContainer}>
-					<div className={st.bullet}>
-						<ClockIcon stroke={'#fff'} size={28}/>
-						<div className={st.bulletContent}>
-							<span>8 clases presenciales</span>
-							<span>4 hs cada una</span>
-						</div>
-					</div>
-					<div className={st.bullet}>
-						<ClockIcon stroke={'#fff'} size={28}/>
-						<div className={st.bulletContent}>
-							<span>8 clases presenciales</span>
-							<span>4 hs cada una</span>
-						</div>
-					</div>
-					<div className={st.bullet}>
-						<ClockIcon stroke={'#fff'} size={28}/>
-						<div className={st.bulletContent}>
-							<span>8 clases presenciales</span>
-							<span>4 hs cada una</span>
-						</div>
+			</article>
+			<div className={st.bulletsContainer}>
+				<div className={st.bullet}>
+					<ClockIcon stroke={'#363636'} size={28}/>
+					<div className={st.bulletContent}>
+						<span>8 clases presenciales</span>
+						<span>4 hs cada una</span>
 					</div>
 				</div>
-			</article>
+				<div className={st.bullet}>
+					<ClockIcon stroke={'#363636'} size={28}/>
+					<div className={st.bulletContent}>
+						<span>8 clases presenciales</span>
+						<span>4 hs cada una</span>
+					</div>
+				</div>
+				<div className={st.bullet}>
+					<ClockIcon stroke={'#363636'} size={28}/>
+					<div className={st.bulletContent}>
+						<span>8 clases presenciales</span>
+						<span>4 hs cada una</span>
+					</div>
+				</div>
+			</div>
 		</section>
 	)
 }

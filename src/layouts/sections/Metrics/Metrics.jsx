@@ -41,7 +41,7 @@ const Metrics = () => {
         <div className={styles.grid}>
           <MetricItem target={1000} label="Clientes Satisfechos" suffix="+" shouldAnimate={shouldAnimate} />
           <MetricItem target={15} label="Años de Experiencia" suffix="+" shouldAnimate={shouldAnimate} />
-          <MetricItem target={7} label="Sedes" suffix="+" shouldAnimate={shouldAnimate} />
+          <MetricItem target={8} label="Sedes" suffix="" shouldAnimate={shouldAnimate} />
         </div>
       </div>
     </section>

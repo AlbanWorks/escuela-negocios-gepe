@@ -1,16 +1,25 @@
 .container{
-	padding: 120px 32px 32px 32px;
+	color: #fff;
+}
+.content{
+	padding: 20px;
 	padding-top: 120px;
 	background: linear-gradient(45deg, var(--gepe_blue1), var(--gepe_blue2));
-	color: #fff;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .title{
   margin: 0;
+  text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
   text-shadow: 0 2px 3px var(--gepe_blue1);
 }
 .description{
+	text-align: center;
 	margin:0;
 	color: #f7f7f7;
 	font-weight: 600;
@@ -50,9 +59,10 @@
 	gap: 20px;
 }
 .bullet{
+	color: #363636;
 	display: flex;
 	align-items: center;
-	border: 1px solid #fff;
+	border: 1px solid #333333;
 	border-radius: 16px;
 	background-color: #ffffff15;
 	padding: 8px;
@@ -61,16 +71,15 @@
 .bulletContent{
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+}
+.bulletsContainer{
+	padding: 40px 20px;
 }
 @media (min-width: 900px) {
 	.container{
-		height: 100dvh;
 		display: flex;
-		align-items: center;
-	}
-	.content{
-		width: 50%;
-		margin-left: 10%;
+		flex-direction: column;
 	}
 	.title{
 		font-size: 3.5rem;
@@ -81,6 +90,8 @@
 	}
 	.bulletsContainer{
 		flex-direction: row;
+		align-items: center;
+		justify-content: center;
 	}
 	.bullet{
 		padding: 8px;

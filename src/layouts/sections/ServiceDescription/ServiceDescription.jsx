@@ -1,8 +1,9 @@
 import React,{useState, useEffect} from 'react'
 import st from './ServiceDescription.module.css'
 import WPForm from '@/components/WPForm/WPForm'
+import Carousel from './components/Carousel/Carousel'
 
-export const ServiceDescription = ({id, img, title, description_parts, direction, inscriptionTo}) => {
+export const ServiceDescription = ({id, images, title, description_parts, direction, inscriptionTo}) => {
 	const [isFormOpen, setIsFormOpen] = useState(false)
 	const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER
 
@@ -19,11 +20,7 @@ export const ServiceDescription = ({id, img, title, description_parts, direction
 			} 
 			id={id}
 		>
-			<img 
-				className={st.img}
-				src={img.url} 
-				alt={img.alt} 
-			/>
+			<Carousel images={images}/>
 			<article className={st.contentContainer}>
 				{
 					description_parts.map((part, index) =>

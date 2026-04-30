@@ -23,6 +23,16 @@ export const Hero = () => {
 
   return (
     <section id="inicio" className={styles.hero}>
+		 {images.map((src, i) => (
+        <div
+          key={src}
+          className={styles.backgroundLayer}
+          style={{
+            backgroundImage: `url(${src})`,
+            opacity: i === index ? 1 : 0,
+          }}
+        />
+      ))}
         <div className={styles.content}>
           <h1 className={styles.title}>
             Escuela de Negocios
@@ -36,4 +46,6 @@ export const Hero = () => {
     </section>
   );
 };
+
+
 

@@ -108,13 +108,15 @@
 		width: 100%;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-evenly;
+		justify-content: center;
 		align-items: center;
 		padding: 64px 32px;
 		gap: 20px;
 	}
 	.containerRight{
 		flex-direction: row-reverse;
+		justify-content: center;
+		align-items: center;
 	}
 	.contentContainer{	
 		margin-top: 0;
@@ -134,4 +136,9 @@
 		font-size: 1.1rem;
 		letter-spacing: 0.01em;
 	}	
+}
+@media (min-width: 1500px) {
+	.container{
+		padding: 64px 100px ;
+	}
 }
